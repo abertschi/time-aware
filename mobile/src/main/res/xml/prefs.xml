@@ -6,26 +6,26 @@
         android:title="Wear Options" >
 
         <CheckBoxPreference
-            android:key="checkBox"
+            android:key="enabled"
             android:title="Enable Time Aware"
             android:summary=""/>
 
         <ListPreference
             android:entries="@array/frequencyLabels"
             android:entryValues="@array/frequencyValues"
-            android:key="listpref"
+            android:key="frequency"
             android:summary=""
             android:title="Set Frequency" />
 
-        <CheckBoxPreference
-            android:key="checkBox"
-            android:summary="Set frequency according to hh:00:00"
-            android:title="Synchronize with full time unit" />
+        <!--<CheckBoxPreference-->
+            <!--android:key="checkBox"-->
+            <!--android:summary="Set frequency according to hh:00:00"-->
+            <!--android:title="Synchronize with full time unit" />-->
 
 
-        <Preference android:title="Set Vibration Pattern "
-            android:key="pattern"
-            android:summary=""/>
+        <!--<Preference android:title="Set Vibration Pattern "-->
+            <!--android:key="pattern"-->
+            <!--android:summary=""/>-->
 
     </PreferenceCategory>
 
@@ -34,7 +34,7 @@
         android:title="Demo" >
 
         <Preference android:title="Test settings "
-            android:key="test"
-            android:summary=""/>
+            android:summary=""
+            android:key="demo" />
     </PreferenceCategory>
 </PreferenceScreen>

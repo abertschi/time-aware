@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
 
-
     <application
         android:allowBackup="true"
         android:keepScreenOn="true">
@@ -25,6 +24,7 @@
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
@@ -35,8 +35,18 @@
         </receiver>
 
         <service
-            android:name=".TimeAwareService"
+            android:name=".VibrationService"
             android:exported="false"/>
+
+        <receiver android:name=".VibrationScheduler" >
+        </receiver>
+
+        <service android:name=".ConfigurationService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>
